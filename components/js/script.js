@@ -1,7 +1,22 @@
+var ultimaPosicao = 0;
 window.addEventListener( "scroll", () => {
-  var nav = document.querySelector( "nav" );
-  nav.classList.toggle( "sticky", window.scrollY > 700 );
-} );
+  var nav = document.querySelector( "header nav" );
+  var atualPosicao = window.scrollY;
+
+  if ( atualPosicao > ultimaPosicao && atualPosicao>0 ) {
+    nav.classList.remove( "sticky" );
+    nav.style.top="-60px"
+  } else {
+    nav.classList.add( "sticky" );
+    nav.style.top="0px"
+  }
+  if(atualPosicao<100){
+    nav.classList.remove( "sticky" );
+    nav.style.top="0px"
+  }
+  ultimaPosicao = atualPosicao;
+});
+
 
 var menuLinks = document.querySelectorAll( 'header nav ul.nav a[href^="#"]' );
 var a = document.querySelectorAll( 'header a[href^="#home"]' );
@@ -10,13 +25,6 @@ function getDistanceFromTheTop ( element ) {
   const id = element.getAttribute( "href" );
   return document.querySelector( id ).offsetTop;
 }
-
-// function nativeScroll(distanceFromTheTop) {
-//   window.scroll({
-//     top: distanceFromTheTop,
-//     behavior: "smooth",
-//   });
-// }
 
 function scrollToSection ( event ) {
   event.preventDefault();
@@ -35,7 +43,7 @@ function smoothScrollTo ( endX, endY, duration ) {
   const distanceY = endY - startY;
   const startTime = new Date().getTime();
 
-  duration = typeof duration !== "undefined" ? duration : 400;
+  duration = typeof duration !== "undefined" ? duration : 1000;
 
   const easeInOutQuart = ( time, from, distance, duration ) => {
     if ( ( time /= duration / 2 ) < 1 )
@@ -82,12 +90,12 @@ let slides = document.querySelectorAll( "body main section#chronology ul.slidesh
 showSlides();
 
 
-startSlideInterval();
+// startSlideInterval();
 function showSlides () {
   for ( let index = 0; index < itemTimeLine.length; index++ ) {
-      let positionItem = centerItem - ( (window.innerWidth/100*20) * ( slideIndex - 1 ) );
-      itemTimeLine[ index ].style.transform = `translateX(${ positionItem }px)`;
-    }
+    let positionItem = centerItem - ( ( window.innerWidth / 100 * 20 ) * ( slideIndex - 1 ) );
+    itemTimeLine[ index ].style.transform = `translateX(${ positionItem }px)`;
+  }
 
   for ( let i = 0; i < slides.length; i++ ) {
     slides[ i ].className = slides[ i ].className.replace( "fade", "" );
@@ -200,27 +208,27 @@ for ( let index = 0; index < efeitoHover.length; index++ ) {
 }
 
 /* let time = 3000,
-	actualFrame = 0,
-	images = document.querySelectorAll( "#slider div" ),
-	max = images.length;
+  actualFrame = 0,
+  images = document.querySelectorAll( "#slider div" ),
+  max = images.length;
 
 function nextImage () {
 
-	images[ actualFrame ].classList.remove( "selected" );
+  images[ actualFrame ].classList.remove( "selected" );
 
-	actualFrame++;
+  actualFrame++;
 
-	if ( actualFrame >= max )
-		actualFrame = 0;
+  if ( actualFrame >= max )
+    actualFrame = 0;
 
-	images[ actualFrame ].classList.add( "selected" );
+  images[ actualFrame ].classList.add( "selected" );
 }
 
 function start () {
-	setInterval( () => {
-		// troca de image
-		nextImage();
-	}, time );
+  setInterval( () => {
+    // troca de image
+    nextImage();
+  }, time );
 }
 
 window.addEventListener( "load", start ); */

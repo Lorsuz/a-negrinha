@@ -8,23 +8,36 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  user-select: none;
+  list-style: none;
+}
+
+html {
+  transition: 1000ms;
 }
 
 body {
   background: #ede8c9;
 }
 body header {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 body header nav {
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  transition: 500ms;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  position: fixed;
+  background: #ede8c9;
 }
 body header nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 body header nav ul.nav li {
   margin: 20px;
@@ -49,9 +62,12 @@ body header nav ul.links li a {
   text-decoration: none;
   font-size: 1.5rem;
 }
+body header nav.sticky {
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
 body header h1 {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 170px;
   font-size: 5rem;
   display: flex;
   justify-content: center;
@@ -333,6 +349,7 @@ body main section#book {
 }
 body main section#otherWorks {
   background: #f2f2f2;
+  padding-bottom: 80px;
 }
 body main section#otherWorks > p {
   font-size: 1.2rem;
@@ -390,7 +407,7 @@ body main section#otherWorks ul li div.card figure figcaption {
   transform: rotateY(180deg);
   position: absolute;
   padding: 25px;
-  background: #fafafa url(../assets/img/popUp.png) fixed;
+  background: #fafafa url(../assets/img/popUp-folha.png) no-repeat bottom right;
   overflow: hidden;
   border-top: 5px solid;
   border-radius: 10px;
@@ -435,8 +452,78 @@ body main section#otherWorks ul li button:hover {
   letter-spacing: 1px;
   font-weight: 100;
 }
-body main section#context p {
+body main section#footer p {
   margin: 70px;
+}
+body footer {
+  background: #000;
+  color: #ffffff;
+}
+body footer > p {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px 0 10px;
+  text-align: center;
+}
+body footer div.footer-horizontal {
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+body footer div.footer-horizontal h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+body footer div.footer-horizontal > div {
+  width: 33%;
+  padding: 10px 30px 0 50px;
+  height: 300px;
+}
+body footer div.footer-horizontal > div.devs ul li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.contato {
+  border-right: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+}
+body footer div.footer-horizontal > div.contato ul.dados li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais {
+  display: flex;
+  justify-content: center;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li {
+  margin: 40px 20px;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a {
+  position: relative;
+  transition: 100ms;
+  top: 0;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a i {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a:hover {
+  top: -5px;
+}
+body footer div.footer-horizontal > div.info ul li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.info ul li a {
+  color: rgb(255, 255, 255);
+}
+body footer div.footer-horizontal > div.info ul li a:hover {
+  text-decoration: underline;
+}
+body footer div.copy {
+  background: rgb(255, 255, 255);
+}
+body footer div.copy p {
+  text-align: center;
+  padding: 20px;
+  color: #000;
 }
 body::-webkit-scrollbar {
   width: 5px;

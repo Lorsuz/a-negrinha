@@ -544,12 +544,19 @@ body {
   footer {
     background: #000;
     color: #ffffff;
->p{
-width: 70%;
-margin: 0 auto;
-padding: 30px 0 10px;
-text-align: center;
+>h2{
+  margin: 0 auto;
+  padding: 30px 0 10px;
+  text-align: center;
+  font-size: 2rem;
 }
+    > p {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0px 0 10px;
+      text-align: center;
+    }
+
     div {
       &.footer-horizontal {
         height: 350px;
@@ -569,7 +576,6 @@ text-align: center;
 
           &.devs {
             ul {
-
               li {
                 margin-top: 10px;
               }
@@ -582,7 +588,6 @@ text-align: center;
 
             ul {
               &.dados {
-
                 li {
                   margin-top: 10px;
                 }

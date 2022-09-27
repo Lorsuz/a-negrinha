@@ -13,9 +13,6 @@
   // outline: 1px dotted;
 }
 
-html {
-  transition: 1000ms;
-}
 
 body {
   // overflow-x: hidden;
@@ -196,6 +193,7 @@ body {
         p {
           margin-top: 30px;
           font-size: 1.1rem;
+          text-align: justify;
         }
       }
 
@@ -245,7 +243,7 @@ body {
       &#chronology {
         padding-top: 40px;
         height: 100vh;
-        background: #fff url(../assets/img/barraBook-corte.png) repeat-x center bottom;
+        background: #fff;
         background-size: 600px;
 
         ul {
@@ -409,8 +407,13 @@ body {
       }
 
       &#book {
-        background: #ffd1a0;
-        height: 500px;
+        background: #EDE8C9;
+        height: 370px;
+        p{
+font-size: 1.2rem;
+text-align: justify;
+padding: 0 50px;
+        }
       }
 
       &#otherWorks {
@@ -638,12 +641,12 @@ body {
       }
 
       &.copy {
-        background: rgb(255, 255, 255);
+        // background: rgb(255, 255, 255);
 
         p {
           text-align: center;
           padding: 20px;
-          color: #000;
+          // color: #000;
         }
       }
     }

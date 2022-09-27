@@ -3,21 +3,19 @@ window.addEventListener( "scroll", () => {
   var nav = document.querySelector( "header nav" );
   var atualPosicao = window.scrollY;
 
-  if ( atualPosicao > ultimaPosicao && atualPosicao>0 ) {
+  if ( atualPosicao > ultimaPosicao && atualPosicao > 0 ) {
     nav.classList.remove( "sticky" );
-    nav.style.top="-60px"
+    nav.style.top = "-60px";
   } else {
     nav.classList.add( "sticky" );
-    nav.style.top="0px"
+    nav.style.top = "0px";
   }
-  if(atualPosicao<100){
+  if ( atualPosicao < 80 ) {
     nav.classList.remove( "sticky" );
-    nav.style.top="0px"
+    nav.style.top = "0px";
   }
   ultimaPosicao = atualPosicao;
-});
-
-
+} );
 var menuLinks = document.querySelectorAll( 'header nav ul.nav a[href^="#"]' );
 var a = document.querySelectorAll( 'header a[href^="#home"]' );
 

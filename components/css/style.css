@@ -11,10 +11,6 @@
   list-style: none;
 }
 
-html {
-  transition: 1000ms;
-}
-
 body {
   background: #ede8c9;
 }
@@ -169,6 +165,7 @@ body main section#introduction {
 body main section#introduction p {
   margin-top: 30px;
   font-size: 1.1rem;
+  text-align: justify;
 }
 body main section#biography {
   display: flex;
@@ -207,7 +204,7 @@ body main section#biography div.lifeHim::-webkit-scrollbar {
 body main section#chronology {
   padding-top: 40px;
   height: 100vh;
-  background: #fff url(../assets/img/barraBook-corte.png) repeat-x center bottom;
+  background: #fff;
   background-size: 600px;
 }
 body main section#chronology ul.time-line {
@@ -344,8 +341,13 @@ body main section#chronology .next {
   border-radius: 3px 0 0 3px;
 }
 body main section#book {
-  background: #ffd1a0;
-  height: 500px;
+  background: #EDE8C9;
+  height: 370px;
+}
+body main section#book p {
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 0 50px;
 }
 body main section#otherWorks {
   background: #f2f2f2;
@@ -523,13 +525,9 @@ body footer div.footer-horizontal > div.info ul li a {
 body footer div.footer-horizontal > div.info ul li a:hover {
   text-decoration: underline;
 }
-body footer div.copy {
-  background: rgb(255, 255, 255);
-}
 body footer div.copy p {
   text-align: center;
   padding: 20px;
-  color: #000;
 }
 body::-webkit-scrollbar {
   width: 5px;

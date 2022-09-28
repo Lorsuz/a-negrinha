@@ -9,10 +9,9 @@
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   list-style: none;
-  // user-select: none;
+  user-select: none;
   // outline: 1px dotted;
 }
-
 
 body {
   // overflow-x: hidden;
@@ -191,7 +190,7 @@ body {
         padding: 100px 100px;
 
         p {
-          margin-top: 30px;
+          margin-top: 20px;
           font-size: 1.1rem;
           text-align: justify;
         }
@@ -321,8 +320,9 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            
             li.mySlides {
+              padding: 0 100px;
               opacity: 0;
               list-style: none;
               transition: ease-in-out 500ms;
@@ -335,8 +335,8 @@ body {
 
                 img {
                   // vertical-align: middle;
-                  width: 200px;
-                  height: 300px;
+                  width: 300px;
+                  height: 350px;
                   margin-right: 50px;
                 }
 
@@ -408,21 +408,27 @@ body {
 
       &#book {
         background: #EDE8C9;
-        height: 370px;
-        p{
-font-size: 1.2rem;
-text-align: justify;
-padding: 0 50px;
+        padding: 30px 100px 100px;
+
+        p {
+          margin-top: 20px;
+          font-size: 1.1rem;
+          text-align: justify;
         }
       }
 
       &#otherWorks {
         background: #f2f2f2;
         padding-bottom: 80px;
+        box-shadow: 0px -50px 80px 10px #f2f2f2;
+        h2{
+          padding-top: 0px;
+        }
 
         > p {
           font-size: 1.2rem;
-          padding: 50px;
+          padding: 10px 100px;
+          text-align: justify;
         }
 
         ul {
@@ -547,12 +553,14 @@ padding: 0 50px;
   footer {
     background: #000;
     color: #ffffff;
->h2{
-  margin: 0 auto;
-  padding: 30px 0 10px;
-  text-align: center;
-  font-size: 2rem;
-}
+
+    > h2 {
+      margin: 0 auto;
+      padding: 30px 0 10px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
     > p {
       width: 70%;
       margin: 0 auto;
@@ -641,8 +649,8 @@ padding: 0 50px;
       }
 
       &.copy {
-        // background: rgb(255, 255, 255);
 
+        // background: rgb(255, 255, 255);
         p {
           text-align: center;
           padding: 20px;
